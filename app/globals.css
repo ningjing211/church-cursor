@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --primary-color: #FF7E5F;
+  --secondary-color: #0D9488;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    rgb(var(--background-end-rgb))
+  );
+  @apply text-gray-900 bg-white;
+}
+
+/* 平滑滾動 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 優雅的文字選擇效果 */
+::selection {
+  background: rgba(20, 184, 166, 0.3);
+  color: #fff;
+}
+
+/* 自定義滾動條 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f766e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #134e4a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #115e59;
+}
+
+/* 文字漸變效果 */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400;
+}
+
+/* 玻璃擬態效果 */
+.glass-effect {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20;
+}
+
+/* 漸變邊框效果 */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, #2dd4bf, #059669);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* 動畫效果 */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.container {
+  @apply w-full px-4;
+}
+
+/* 自定义按钮样式 */
+.btn-primary {
+  @apply bg-[#FF7E5F] text-white px-6 py-3 rounded-full hover:bg-[#FF6B4A] transition duration-300;
+}
+
+.btn-secondary {
+  @apply bg-teal-600 text-white px-6 py-3 rounded-full hover:bg-teal-700 transition duration-300;
+}
+
+/* 自定义卡片样式 */
+.card {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300;
+}
+
+/* 自定义标题样式 */
+.section-title {
+  @apply text-3xl font-bold text-center mb-4;
+}
+
+.section-subtitle {
+  @apply text-gray-600 text-center mb-12;
+} 

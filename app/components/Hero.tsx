@@ -13,7 +13,7 @@ const Hero = () => {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1490810194309-344b3661ba39")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3")',
           filter: 'brightness(0.65)'
         }}
       />
@@ -35,7 +35,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-7xl sm:text-8xl md:text-9xl font-bold text-white mb-12 tracking-tight leading-tight"
           >
-            回家問候
+            祈禱祝福
           </motion.h1>
           <motion.p 
             initial={{ y: 30, opacity: 0 }}

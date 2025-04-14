@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-7xl sm:text-8xl md:text-9xl font-bold text-white mb-12 tracking-tight leading-tight"
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-8 sm:mb-12 tracking-tight leading-tight"
           >
             祈禱祝福
           </motion.h1>
@@ -41,7 +41,7 @@ const Hero = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="text-2xl sm:text-3xl text-white/90 mb-16 max-w-4xl mx-auto font-light leading-relaxed tracking-wide"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 sm:mb-16 max-w-4xl mx-auto font-light leading-relaxed tracking-wide"
           >
             在這裡，我們一起尋求生命的意義，分享信仰的喜樂
           </motion.p>

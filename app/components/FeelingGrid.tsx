@@ -47,11 +47,11 @@ const FeelingGrid = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-6xl font-bold text-center text-white mb-4 tracking-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-4 tracking-tight"
         >
           What Do You Feel Like Today?
         </motion.h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 md:mt-16 px-4 sm:px-6 md:px-8">
           {gridItems.map((item, index) => (
             <motion.div
               key={index}
@@ -62,18 +62,16 @@ const FeelingGrid = () => {
                 scale: 1.05,
                 backgroundColor: 'rgba(255,255,255,0.1)',
               }}
-              className={`flex flex-col items-center justify-center p-8 backdrop-blur-sm border border-teal-600/30 rounded-2xl transition-all duration-300 cursor-pointer group ${
-                index === 7 ? 'hidden md:flex' : ''
-              }`}
+              className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 backdrop-blur-sm border border-teal-600/30 rounded-xl sm:rounded-2xl transition-all duration-300 cursor-pointer group"
             >
               <motion.div 
-                className="w-16 h-16 mb-6 flex items-center justify-center relative"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-3 sm:mb-4 md:mb-6 flex items-center justify-center relative"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <i className={`${item.icon} text-4xl text-white group-hover:text-teal-300 transition-colors duration-300`}></i>
+                <i className={`${item.icon} text-2xl sm:text-3xl md:text-4xl text-white group-hover:text-teal-300 transition-colors duration-300`}></i>
               </motion.div>
-              <h3 className="text-xl font-medium text-white text-center group-hover:text-teal-300 transition-colors duration-300">
+              <h3 className="text-sm sm:text-base md:text-xl font-medium text-white text-center group-hover:text-teal-300 transition-colors duration-300">
                 {item.title}
               </h3>
             </motion.div>

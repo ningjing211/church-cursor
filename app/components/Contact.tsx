@@ -42,11 +42,11 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold text-center text-white mb-4 tracking-tight">Contact Us</h2>
-          <p className="text-xl text-center text-teal-200 mb-24">聯繫我們</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-2 sm:mb-4 tracking-tight">Contact Us</h2>
+          <p className="text-lg sm:text-xl text-center text-teal-200 mb-12 sm:mb-16 md:mb-24">聯繫我們</p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 lg:gap-16 px-4 sm:px-6 md:px-8">
           {contactInfo.map((info, index) => (
             <motion.div 
               key={index}
@@ -54,16 +54,16 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative flex flex-col items-center text-center py-8"
+              className="relative flex flex-col items-center text-center py-4 sm:py-6 md:py-8"
             >
               <motion.div 
                 whileHover={{ scale: 1.1 }}
-                className="w-24 h-24 bg-teal-700/50 backdrop-blur-sm rounded-full flex items-center justify-center mb-8 shadow-lg"
+                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-teal-700/50 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 sm:mb-6 md:mb-8 shadow-lg"
               >
-                <i className={`${info.icon} text-4xl text-white`}></i>
+                <i className={`${info.icon} text-2xl sm:text-3xl md:text-4xl text-white`}></i>
               </motion.div>
-              <h3 className="text-2xl font-medium mb-4">{info.title}</h3>
-              <p className="text-teal-200 text-lg">{info.value}</p>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-3 md:mb-4">{info.title}</h3>
+              <p className="text-base sm:text-lg text-teal-200">{info.value}</p>
             </motion.div>
           ))}
         </div>
@@ -73,10 +73,10 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-32 text-center"
+          className="mt-16 sm:mt-24 md:mt-32 text-center"
         >
-          <h3 className="text-5xl font-bold mb-4 tracking-tight">Find Us</h3>
-          <p className="text-xl text-teal-200 mb-16">找到我們</p>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 tracking-tight">Find Us</h3>
+          <p className="text-lg sm:text-xl text-teal-200 mb-8 sm:mb-12 md:mb-16">找到我們</p>
           <motion.div 
             initial={{ scale: 0.95, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

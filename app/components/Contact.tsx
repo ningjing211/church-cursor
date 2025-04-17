@@ -87,7 +87,7 @@ const Contact = () => {
             <div className="aspect-video bg-teal-700/50 rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/2zR4GGjy2cI"
+                src="https://www.youtube.com/embed/sExKnudpc3M"
                 title="Church Introduction"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
